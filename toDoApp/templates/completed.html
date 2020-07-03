@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Completed Items</title>
+</head>
+<body>
+    <h2> Completed Items</h2>
+    <div>
+        <ul id="myList">
+            <li ng-repeat="item in vm.completedList">
+                {{item.name}}
+            </li>
+        </ul>
+        <button ng-click="vm.clearCompleted()">Clear Completed</button>
+    </div>
+</body>
+</html>

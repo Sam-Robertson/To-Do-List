@@ -1,0 +1,33 @@
+<!-- Navigation Bar -->
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a ui-sref="active" class="navbar-brand">Active Items</a>
+            <a ui-sref="completed" class="navbar-brand">Completed Items</a>
+        </div>
+
+
+
+        <div id="navbarCollapse" class="collapse navbar-collapse" ng-controller="navController as nav">
+            <ul class="nav navbar-nav">
+
+
+                <li ng-class="{ active: nav.isActive('/home')}" ng-repeat="item in nav.Lists">
+                    <a ui-sref="home({index: $index})" data-toggle="collapse" data-target=".navbar-collapse.in"> {{item}} </a></li>
+
+
+
+                <li ng-class="{ active: nav.isActive('/about')}">
+                    <a ui-sref="about" data-toggle="collapse" data-target=".navbar-collapse.in">About</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
