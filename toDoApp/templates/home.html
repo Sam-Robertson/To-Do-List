@@ -1,7 +1,7 @@
 <div class="alert alert-success">
     <h3>To Do List</h3>
     <input type="text" ng-model="hc.sometext"/> <button ng-click="hc.makeItem()" >New Item</button>
-    <input type="text" ng-model="hc.titleText"/><button id="newList" onload="hc.makeList()" ng-click="hc.makeList()">New List</button>
+    <input type="text" ng-model="hc.titleText"/><button id="newList" ng-click="hc.makeList()">New List</button>
     <h4>Item to Add: <span ng-bind="hc.sometext"></span></h4> <h4>List Title: <span ng-bind="hc.titleText"></span></h4>
 
     <ul id="allLists">

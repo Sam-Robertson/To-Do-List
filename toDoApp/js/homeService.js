@@ -13,7 +13,7 @@
         var hs = this;
 
         hs.myFullList = [];
-        hs.Lists = [];
+        hs.Lists = ["Main List"];
 
 
         hs.clearText = clearText;
@@ -43,6 +43,7 @@
         }
         function makeNewList(titleText) {
             hs.Lists.push(titleText);
+            
         }
         function clearCompleted() {
                hs.myFullList = getActiveTasks();
